@@ -1,0 +1,566 @@
+/* estrututa*/
+body{
+	font: 12px "Lucinda Grande", "Lucinda Sans Unicode", Arial, sans-serif;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+/********************** resposive *******************/
+@media screen and (max-width: 540px) {
+	.bnt-responsive{
+		margin-top: 10px !important;
+	}
+	.conteiner-card-marca{
+		align-content: space-around;
+	}
+
+	.text-qual-veiculo{
+		text-align: center;
+	}
+	.barra-search{
+		display: flex;
+		justify-content: center;
+	}
+
+	.title-disponivel{
+		text-align: center !important;
+	}
+
+	.mais-fotos-grid{
+		display: none;
+	}
+
+	.bloco-responsivo-ficha{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+	}
+
+	#teste-card{
+		padding: 10px;
+		margin-bottom: 10px;
+		
+	}
+
+	.mapa-google{
+		width: 350px ;
+		height: 300px ;
+	}
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+	.bnt-responsive{
+		margin-top: 10px !important;
+
+	}
+	.text-qual-veiculo{
+		text-align: center;
+	}
+	.barra-search{
+		display: flex;
+		justify-content: center;
+	}
+
+	.title-disponivel{
+		text-align: center !important;
+	}
+
+	.mais-fotos-grid{
+		display: none;
+	}
+
+	.bloco-responsivo-ficha{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	
+	}
+	.mapa-google{
+		width: 350px ;
+		height: 300px ;
+	}
+	
+}
+
+/*****************************/
+
+/*********mapa loja**********/
+.mapa-google{
+	border-radius: 5px;
+}
+
+
+/*logo menu top*/
+#logo-max{
+	width: 150px;
+	height: 43px;
+	display: block;
+	text-indent: -9999px;
+	filter: drop-shadow(1px 1px 1px #000);
+	background: url(../img/grupomax.PNG) no-repeat;
+}
+
+/************* msg sticky **************/
+#mensagem{
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 0.8rem;
+}
+
+#func{
+	font-size: 0.8rem;
+	text-align: right;
+	font-weight: 600;
+	color: gray;
+}
+
+#func2{
+	font-size: 0.8rem;
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+/********************/
+
+/*navbar*/
+.navbar ul li a{
+	color: white;
+	text-transform: uppercase;
+}
+
+.navbar ul li .dropdown-menu a{
+	color: black;
+	text-transform: uppercase;
+}
+
+.navbar ul li .dropdown-menu a:hover{
+	color: black;
+	background: #dedede;
+	transition: all 0.5s;
+}
+
+.navbar ul li a:hover{
+	color: yellow;
+	;
+	
+}
+
+.navbar ul li .semborda:hover{
+	border: none;
+}
+
+.whats-hover  span{
+	color: #212529;
+}
+
+.whats-hover span:hover{
+	color: white;
+	transition: color 0.5s;
+}
+
+.ativo{
+	color: yellow !important;
+}
+
+.ativo-drop{
+	background: #dedede !important;
+}
+
+
+
+/*card*/
+.card{
+	margin-bottom: 6px;
+}
+.card ul li img{
+	width: 100%;
+	border-radius: 7px 7px 0 0;
+}
+
+.img-marca{
+	float: left;
+	margin-right: 8px;
+}
+
+.marca-detalhes{
+	float: left;
+}
+
+.painel{
+	background: url(../img/painel.png) no-repeat;
+	padding-left: 23px;
+	padding-right: 10px;
+}
+
+.marcha{
+	background: url(../img/marcha.png) no-repeat;
+	padding-left: 23px;
+}
+
+.gas{
+	background: url(../img/gas.png) no-repeat;
+	padding-left: 23px;
+}
+
+.leilao{
+	background: url(../img/leilao.png) no-repeat;
+	padding-left: 23px;
+
+}
+
+/*card marcas proximo ao search*/
+
+.card-marca a{
+	text-decoration: none;
+}
+
+.card-marca:hover{
+	box-shadow: 2px 1px 5px #000;
+	transition: all 0.7s;
+	
+}
+
+.tamanho-logo-card{
+	width: 80px;
+	height: 70px;
+}
+
+.tamanho-logo-card img{
+	margin: 20px 0 0 0;
+
+}
+
+.loja1-card-marca{
+	display: none;
+}
+
+/******************cards diversos apos novidades ************/
+#card-deiversos{
+	width: 100%;
+	height: 90%;
+	margin-bottom: 60px;
+}
+
+#card-feedback{
+	width: 100%;
+	height: 90%;
+	margin-bottom: 60px;
+	background: #dedede;
+}
+
+#card-opcoes{
+	width: 100%;
+	height: 90%;
+	margin-bottom: 60px;
+	background: #212529;
+}
+
+/************** rede social ****************/
+.rede-social a{
+	text-decoration: none;
+}
+
+.rede-social a img:hover{
+	padding: 2px;
+	transition: all 0.3s;
+}
+
+/*rodape*/
+footer{
+	margin-top: 50px;
+	width: 100%;
+	height: auto;
+	background: #dedede;
+}
+
+.endereco h6{
+	color: yellow;
+	margin-bottom: 0;
+}
+
+.endereco h5{
+	color: yellow;
+}
+
+/******* personalização bs ***********/
+
+.navbar-toggler{
+	background: white !important;
+}
+
+.active{
+	color: #fff !important;
+	background: #000 !important;
+}
+
+
+
+/*************  grid ************/
+
+.column1 {
+  flex: 48%;
+  max-width: 50%;
+  padding: 0;
+
+}
+
+.column1 img {
+
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column2 {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0;
+}
+
+.column2 img {
+
+  vertical-align: middle;
+  width: 100%;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.mais-fotos-grid{
+	color: #fff;
+	text-decoration: none;
+}
+
+/******************* grid bancos **************/
+.banks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/************** trabalhe conosco **************/
+/* Full-width input fields */
+.botao input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.botao button {
+  background-color: #04AA6D;
+  color: white;
+  margin: 0;
+
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.botao button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn1 {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer1 {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container1 {
+  padding: 16px;
+}
+
+span.psw1 {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close1 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate1 {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 500px) {
+  span.psw1 {
+     display: block;
+     float: none;
+  }
+  .cancelbtn1 {
+     width: 100%;
+  }
+  .botao{
+  	margin-left: -8px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw1 {
+     display: block;
+     float: none;
+  }
+  .cancelbtn1 {
+     width: 100%;
+  }
+  .botao{
+  	margin-left: -8px;
+  }
+}
+
+/**************** animation ******************/
+.animate-left{
+	animation-name: left;
+  animation-duration: 2s;
+  position: relative;
+  animation-timing-function: ease;
+}
+
+@keyframes left {
+	0% {left: 600px; opacity: 0;}
+	
+	100% {left: 0px; opacity: 1;}
+}
+
+.animate-rigth{
+	animation-name: rigth;
+  animation-duration: 2s;
+  position: relative;
+  animation-timing-function: ease;
+}
+
+@keyframes rigth {
+	0% {right: 600px;}
+	
+	100% {right: 0px;}
+}
+
+.opacity-animate{
+	animation-name: opacidade;
+	animation-duration: 2s;
+}
+
+@keyframes opacidade{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.opacity-animate-delay{
+
+	animation-name: opacidade2;
+	animation-duration: 2s;
+	animation-delay: 0.6s;
+	animation-fill-mode: both;
+}
+
+@keyframes opacidade2{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+
+
+.reveal1{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  background: transparent !important;
+}
+
+.reveal1.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.reveal2{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  background: transparent !important;
+}
+
+.reveal2.active{
+  transform: translateX(0);
+  opacity: 1;
+}

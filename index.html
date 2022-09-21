@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script src="js/script.js" type="text/javascript"></script> <!--- meu js --->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    
+    
+    <title>Sua Empresa</title>
+</head>
+    <body>
+        <div>
+            <div class="div-msg">
+            <h6 id="mensagem"></h6>
+            </div>
+            <script>
+                  var hora = new Date().getHours()
+                  var saudacao
+
+                  if( hora < 5){
+                    saudacao = "Boa Madrugada!"
+                  }else if( hora < 12) {
+                      saudacao = "Bom Dia!"
+                  }else if( hora < 18){
+                      saudacao = "Boa Tarde!"
+                  }else{
+                      saudacao = "Boa Noite!"
+                  }
+
+                  document.getElementById("mensagem").innerHTML = saudacao
+            </script>
+            <div id="div-func" style="text-align: right;">
+                <span id="func"></span>
+                <span id="func2"></span>
+            </div>
+            <script>
+                var semana = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+                var d = new Date();
+                var min = d.getMinutes()
+                var data = d.getDay()
+                var funcionamento
+
+                if (data == 0){ //domingo
+                    funcionamento = "não estamos funcionando"
+                }else if(data == 6){ //sábado
+                    if((hora >= 8 && hora <= 13) && (min <= 59)){
+                        funcionamento = "estamos funcionando até às 14h"
+                    }else if((hora >=0 && hora <= 7) && (min <= 59)){
+                        funcionamento = "ainda estamos fechados, abriremos 8h"
+                    }else{
+                        funcionamento = "estamos fechados, voltamos segunda-feira às 8h"
+                    }
+                }else if(data >= 1 || data <= 5) { //segunda a sexta
+                    if((hora >= 8 && hora <= 17) && (min <= 59)){
+                        funcionamento = "estamos funcionando até às 18h"
+                    }else if((hora >=0 && hora <= 7) && (min <= 59)){
+                        funcionamento = "ainda estamos fechados, abriremos 8h"
+                    }else{
+                        funcionamento = "já estamos fechados, voltamos às 8h"
+                    }
+                }
+
+                document.getElementById("func").innerHTML = "Hoje é " + semana[data] + ","
+                document.getElementById("func2").innerHTML = funcionamento
+            </script>
+        </div>
+            
+        </div>
+        <div class="sticky-top">
+        <nav class=" navbar navbar-expand-lg bg-dark"><!--menu top-->
+              <div class="container-fluid ">
+              <a class="opacity-animate navbar-brand" href="index.html"><img src="img/grupomax.png" width="150"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ">
+                     <!--<li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle semborda text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ESTOQUE
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="loja1.html">Loja 1</a></li>
+                        <li><a class="dropdown-item" href="conceito.html">Conceito</a></li>
+                        <li><a class="dropdown-item" href="repasse.html">Repasse</a></li>
+                         <li><a class="dropdown-item" href="aldeota.html">Aldeota</a></li>
+                          <li><a class="dropdown-item" href="motos.html">Motos</a></li>
+                      </ul>
+                    </li>-->
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="loja1.html">estoque</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="venda.html">venda seu carro</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="financiamento.html">financie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">(85) 3021.2211</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="nav-link semborda whats-hover" target="_blank" href="https://wa.me/558530326220">
+                            <div><img src="img/whatsapp.png" width="26px"><span class=" ms-2" style="font-size: 0.7rem">Tem duvidas? Clique aqui!</span></div>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav> <!--fim menu top-->
+        </div>
+
+
+
+        <div class="opacity-animate-delay" ><!--carrossel de img banners-->
+            <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/banner1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/banner2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/banner3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </div><!-- fim carrossel de img-->
+    
+        <div class="animate-rigth card me-3 ms-3 mt-3 mb-5 shadow d-flex justify-content-center"> <!--inicio card-->
+          <div class="card-body "> 
+                <div class="m-2">
+                    <div class="text-qual-veiculo">
+                        <h4><strong>Qual veículo você procura?</strong></h4>
+                    </div>
+                    <div class="barra-search">
+                        <div class="input-group input-group-sm mb-3 md" id="busca-modelo-resp" style="width: 300px;">
+                          <input type="search" class="form-control " placeholder="Marca ou modelo" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <span class="input-group-text" onclick="aleta()" id="basic-addon2"><button style="border: none;"><img src="img/lupa.png" width="26"></button></span>
+                        </div>
+                    </div>
+
+                    
+                <div class="bnt-responsive d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: -50px;">
+                    <button type="button" class="btn btn-primary btn-warning" onclick="aleta()" >Todo o estoque</button>
+                        
+                </div>
+                </div>
+                <div class="container text-center mt-4 mb-3" >
+                  <div class="row cards-marcas" id="fechar-card"> <!-- inicio grid -->
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/volks.png"></div>
+                                    <div style="font-size: 0.8em">VOLKSWAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/audi.png"></div>
+                                    <div style="font-size: 0.8em">AUDI</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/bmw.png"></div>
+                                    <div style="font-size: 0.8em">BMW</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/chevrolet.png"></div>
+                                    <div style="font-size: 0.8em">CHEVROLET</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/honda.png"></div>
+                                    <div style="font-size: 0.8em">HONDA</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/mit.png"></div>
+                                    <div style="font-size: 0.8em">MITSUBISHI</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/porshe.png"></div>
+                                    <div style="font-size: 0.8em">PORSCHE</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/marcas/toyota.png"></div>
+                                    <div style="font-size: 0.8em">TOYOTA</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                
+                    </div>
+                </div><!--fim grid coluna-->
+            </div> 
+        </div>
+        </div><!--fim card principal-->
+
+    <div class="reveal1   text-black text-center">
+        <h4 class="">Últimas novidades</h4>
+    </div>
+
+    <div class="mt-5 mb-5  ">
+    <div class="container text-center ">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="card shadow reveal2" style="width: 24rem;"> <!-- inicio card veículo 1-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/fox.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/volks.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Volksvagem</strong> FOX ITREND 2015</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Fox 1.0 Flex
+                        <div>
+                            <span class="me-2"><i class="bi bi-speedometer me-1"></i>110.000km</span>
+                            <span><i class="bi bi-diagram-3 me-1"></i>Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <a href="grid.html"><button type="button" id="" class="btn btn-sm btn-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button></a>
+                </li>
+              </ul>
+
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+
+        <div class="col order-1 d-flex justify-content-center">
+          <div class="card shadow reveal1" style="width: 24rem;"> <!-- inicio card veículo 2-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/s10.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/chevrolet.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Chevrolet</strong> S10 Country LTZ 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        S10 3.0 Turbo Diesel
+                        <div>
+                            <span class="me-2"><i class="bi bi-speedometer me-1"></i>82.000km</span>
+                            <span><i class="bi bi-diagram-3 me-1"></i>Automática</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>185.0000,00</strong></span>
+                    <a href="grid.html"><button type="button" id="" class="btn btn-sm btn-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button></a>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+
+        <div class="col order-5 d-flex justify-content-center">
+          <div class="card shadow reveal2" style="width: 24rem;"> <!-- inicio card veículo 3-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/bros.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/honda.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Honda</strong> BROS 160 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Bros 160cc Flex
+                        <div>
+                            <span class="me-2"><i class="bi bi-speedometer me-1"></i>39.000km</span>
+                            <span><i class="bi bi-diagram-3 me-1"></i>Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <a href="grid.html"><button type="button" id="" class="btn btn-sm btn-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button></a>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+      </div>
+    </div>
+    </div><!--fim conteiner card novidades-->
+
+    <div class="reveal1 text-center" style="margin-bottom: 50px;"> <!--botao ver mais novidades -->
+        <button type="button" onclick="aleta()" class="btn  btn-warning">Veja todas as novidades</button>
+    </div><!-- fim botao ver mais novidades -->
+
+    <div class="bg-dark" id="card-deiversos"> <!--conteiner card abaixo novidades -->
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md ">
+                    <div class="card w-75" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/carro.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">AVALIAÇÃO ONLINE</h5>
+                        <p class="card-text">Faça a avaliação do seu veículo<br>online, onde você estiver.</p>
+                        <a href="venda.html" class="btn btn-warning">Saiba mais</a>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+           <div class="col-md order-1">
+              <div class="card w-75" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/dinheiro.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">COMPRAMOS SEU VÉICULO</h5>
+                        <p class="card-text">Precisando de dinheiro?<br>Pagamos seu veículo à vista.</p>
+                        <a href="venda.html" class="btn btn-warning">Saiba mais</a>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+            <div class="col-md order-1">
+              <div class="card w-75" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/cartao.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">FINANCIAMENTO</h5>
+                        <p class="card-text">Somos parceiros dos <br>melhores bancos.</p>
+                        <a href="financiamento.html" class="btn btn-warning">Saiba mais</a>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+          </div>
+        </div>
+    </div> <!-- fim conteiner card abaixo novidades -->
+
+
+    <div  id="card-feedback"> <!--conteiner feedback -->
+        <div class="text-center"><h3><br>Nossos clientes</h3></div>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+                    <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/cliente.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Glaylsson Alves</h5>
+                        <p class="card-text">"Ótima loja para fazer negócios, só sai de carro se não quiser."</p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+           <div class="col-md order-1">
+              <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/cliente.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Wiron Junior</h5>
+                        <p class="card-text">"Podem comprar sem medo, o homem tem palavra e é bom de negócio."</p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+            <div class="col-md order-5">
+              <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><img src="img/cliente.png" width="50px"></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Juremal</h5>
+                        <p class="card-text">"Altamente atencioso, não tem dia e hora pra atender o cliente, só marcar."</p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+          </div>
+        </div>
+    </div> <!-- fim conteiner feedback -->
+
+    <div class="rede-social"> <!-- rede social -->
+        <div class="text-center">
+            <div><h5>Nosso Instagram</h5></div>
+            <div>
+                <a href="http://www.instagram.com/maxveiculosoficial" target="_blank"><img src="img/insta.png" width="30px"></a>
+            </div>
+        </div>
+    </div> <!-- fim rede social -->
+
+  
+
+    <div class="mt-5 text-white text-center bg-dark endereco" style="font-size: 0.8em;"><!--endereços-->
+              <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active bg-dark" data-bs-interval="">
+                      <div class="d-flex flex-row mb-3 justify-content-center flex-wrap"><!-- loja 1-->
+                          <div class="p-2">
+                            <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15925.462246892788!2d-38.59329346044922!3d-3.730242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a2cf2636d1d%3A0xae1cb0a85d775641!2sMax%20Ve%C3%ADculos!5e0!3m2!1spt-BR!2sbr!4v1662241123893!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                          <div class="p-2" style="margin-top: 40px">
+                            <h5>Max Veículos Loja 1</h5>
+                                <span><i class="bi bi-geo-alt-fill me-1"></i>Av. Sargento Hermínio, 3951 - Presidente Kennedy</span>
+                                <h5 class="mt-4">Horário de funcionamento</h5>
+                                <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                                <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                                <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+                          </div>
+                        </div><!--fim loja 1-->
+                    </div>
+                    <div class="carousel-item bg-dark" data-bs-interval="">
+                          <div class="d-flex flex-row mb-3 justify-content-center flex-wrap"><!-- conceito-->
+                          <div class="p-2">
+                            <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3900634865786!2d-38.556422885422144!3d-3.724829797289967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7494b592d7999%3A0x8126d6dfea9bedcc!2sMax%20Ve%C3%ADculos%20Conceito!5e0!3m2!1spt-BR!2sbr!4v1662239363384!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                          <div class="p-2" style="margin-top: 40px">
+                            <h5>Max Veículos Conceito</h5>
+                                <span><i class="bi bi-geo-alt-fill me-1"></i>Av. Sargento Hermínio, 1520 - Monte Castelo</span>
+                                <h5 class="mt-4">Horário de funcionamento</h5>
+                                <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                                <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                                <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+                          </div>
+                        </div> <!-- fim conceito-->
+                    </div>
+                    <div class="carousel-item bg-dark">
+                      <div class="d-flex flex-row mb-3 justify-content-center flex-wrap"> <!-- aldeota-->
+                          <div class="p-2">
+                            <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.329696835581!2d-38.5133893854221!3d-3.738150097280342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749483085db33%3A0xddbf870d96b59e27!2sMax%20Ve%C3%ADculos%20Aldeota!5e0!3m2!1spt-BR!2sbr!4v1662241233207!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                          <div class="p-2" style="margin-top: 40px">
+                            <h5>Max Veículos Aldeota</h5>
+                                <span><i class="bi bi-geo-alt-fill me-1"></i>Av. Herálito Graça, 1540 - Aldeota</span>
+                                <h5 class="mt-4">Horário de funcionamento</h5>
+                                <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                                <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                                <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+                          </div>
+                        </div> <!-- fim aldeota-->
+                    </div>
+                    <div class="carousel-item bg-dark">
+                        <div class="d-flex flex-row mb-3 justify-content-center flex-wrap"> <!-- motos-->
+                          <div class="p-2">
+                            <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31851.46952116698!2d-38.58145412089845!3d-3.715173599999982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749456f410c2b%3A0xc6c7a822d5b91f68!2sMax%20Motos!5e0!3m2!1spt-BR!2sbr!4v1662242173791!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                          <div class="p-2" style="margin-top: 40px">
+                            <h5>Max Motos</h5>
+                                <span><i class="bi bi-geo-alt-fill me-1"></i>Rua Jacinto Matos, 464 - Jacarecanga</span>
+                                <h5 class="mt-4">Horário de funcionamento</h5>
+                                <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                                <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                                <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+                          </div>
+                        </div> <!-- fim motos-->
+                    </div>
+                    <div class="carousel-item bg-dark">
+                        <div class="d-flex flex-row mb-3 justify-content-center flex-wrap"> <!-- repasse-->
+                          <div class="p-2">
+                            <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4003362861595!2d-38.552500085422096!3d-3.722558297291609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c7499650c62367%3A0x4160dafda7cbe44e!2sR.%20Padre%20Anchieta%2C%20313%20-%20Jacarecanga%2C%20Fortaleza%20-%20CE%2C%2060325-520!5e0!3m2!1spt-BR!2sbr!4v1662242700060!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          </div>
+                          <div class="p-2" style="margin-top: 40px">
+                            <h5>Max Veículos Repasse</h5>
+                                <span><i class="bi bi-geo-alt-fill me-1"></i>Rua Padre Anchieta, 313 - Monte Castelo</span>
+                                <h5 class="mt-4">Horário de funcionamento</h5>
+                                <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                                <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                                <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+                          </div>
+                        </div> <!-- fim repasse -->
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div><!-- fim endereços-->
+
+    <footer>
+        <div class="footer" style="font-size: 0.8rem;">
+            <div>
+                <div class="footer-resp" style="text-align: center">
+                    <strong>&copy;2022 GW SOFTWARE. Todos os direitos reservados.</strong>
+                </div>
+                    <div class="footer-resp2" style="text-align: center">
+                        <div class="offcanvas offcanvas-bottom" id="demo" style="height: 90px;">
+                          <div class="offcanvas-header">
+                            <div class="offcanvas-title" style="margin: 0 auto;"><img src="img/acerto.png" width="200"></div>
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                          </div>
+                          
+                        </div>
+
+                        <div class="container-fluid mt-1">
+                          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="border: none">
+                            <img src="img/gwpreto.png" width="60">
+                          </button>
+                        </div>
+
+                        <!--<span class="me-3"><a style="text-decoration: none;" href="###"><img src="img/gwpreto.png" width="40"></a></span>-->
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+    </body>
+</html>

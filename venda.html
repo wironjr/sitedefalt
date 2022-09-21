@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <title>Grupo Max Veículos - Venda seu veículo</title>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top "><!--menu top-->
+              <div class="container-fluid ">
+              <a class="navbar-brand" href="index.html"><img src="img/grupomax.png" width="150"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle semborda text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ESTOQUE
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="loja1.html">Loja 1</a></li>
+                        <li><a class="dropdown-item" href="conceito.html">Conceito</a></li>
+                        <li><a class="dropdown-item" href="repasse.html">Repasse</a></li>
+                         <li><a class="dropdown-item" href="aldeota.html">Aldeota</a></li>
+                          <li><a class="dropdown-item" href="motos.html">Motos</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link ativo" aria-current="page" href="venda.html">venda seu carro</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="financiamento.html">financie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">(85) 3021.2211</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="nav-link semborda whats-hover" target="_blank" href="https://wa.me/558530326220">
+                            <div><img src="img/whatsapp.png" width="26px"><span class=" ms-2" style="font-size: 0.7rem">Tem duvidas? Clique aqui!</span></div>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav> <!--fim menu top-->
+
+            <div class="opacity-animate text-center" style="margin-top: 90px;">
+               <h3 >Quer vender seu veículo?</h3>
+               <h6 class="mb-4">Faça sua avaliação agora mesmo!</h6>
+            </div> 
+               
+            <div id="teste-card" class="d-flex flex-row mb-5 justify-content-center flex-wrap" > <!--inicio flex -->
+       
+                <div  class="animate-rigth card md p-3 shadow-lg" style="width: 600px;"> <!--inicio coluna 1 -->
+                      
+                    <div>
+                        <form>
+                            <div >
+                            <h6>DADOS DO VEÍCULO</h6>
+                            </div>
+                            <label for="veic">Seu veículo</label>
+                            <input type="text" id="veic" class="form-control" placeholder="Fiat Uno 1.0 2010/2011" aria-label="veic" aria-describedby="basic-addon1" style="width: 60%" required>
+
+                            <label class="mt-1" for="video">Vídeo</label>
+                            <input type="file" id="video" class="form-control" aria-label="veic" aria-describedby="basic-addon1" style="width: 80%">
+                            <div style="font-size: 0.7rem">Faça um vídeo curto mostrando todo o veículo.</div>
+
+                            <div class="mt-4">
+                            <h6>DADOS DE CONTATO</h6>
+                            </div>
+                            <label for="nome">Seu nome</label>
+                            <input type="text" id="nome" class="form-control" aria-label="nome" aria-describedby="basic-addon1" required>
+
+                            <div>
+                            <label style="float: left;" for="tel">Seu telefone</label>
+                            <br><input type="text" id="tel" class="form-control" aria-label="tel" aria-describedby="basic-addon1" style="width: 50%; float: left;"required>
+                            </div>
+
+                            <div class="ms-5" style="float: left;">
+                            <label for="whats">Whatsapp</label>
+                            <input class="form-check-input " id="whats" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            </div>
+
+                            <div style="clear: both;"></div>
+
+                            <label for="email">Seu email</label>
+                            <input type="email" id="email" class="form-control" aria-label="email" aria-describedby="basic-addon1" style="width: 60%">
+
+                            <button type="submit" class="btn btn-dark mt-3">Enviar</button>
+                        </form>
+                    </div>
+                </div> <!--fim coluna 2 -->
+
+                <div class="p-2" style="width: 600px"> <!--inicio coluna 2 -->
+                    <div class="text-center"><h5>DEPOIS DE ENVIAR</h5></div>
+                    <div class="text-center">
+                    <h6 class="p-2">Vamos te ligar</h6>
+                    <img src="img/batepapo.png" width="80">
+                    </div>
+                   
+                    <div class="text-center mt-4 mb-4">
+                    <h6 class="p-2">Avaliamos seu veículo</h6>
+                    <img src="img/avaliar.png" width="80">
+                    </div>
+                  
+                    <div class="text-center">
+                    <h6 class="p-2">Fechamos negócio</h6>
+                    <img src="img/fechado.png" width="80">
+                    </div>
+                    
+                </div> <!--fim coluna 2 -->
+             </div> <!--fim flex -->
+
+
+        <div  id="card-opcoes" class="shadow"> <!--conteiner opçoes -->
+        <div class="text-center text-white"><h3><br>Suas opções</h3></div>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md">
+                    <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><h1><i class="bi bi-currency-dollar"></i></h1></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Venda à vista</h5>
+                        <p class="card-text">Ótimo para quem precisa de dinheiro rápido, pagamos seu veículo à vista. </p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+           <div class="col-md order-1">
+              <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><h1><i class="bi bi-piggy-bank"></i></h1></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Recebe troco</h5>
+                        <p class="card-text">Você troca seu veículo e ainda sai com dinhero na mão.</p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+            <div class="col-md order-5">
+              <div class="card w-75 shadow" style="margin: 10% auto;"><!--card-->
+                      <div class="card-header">
+                        <div><h1><i class="bi bi-car-front"></i></h1></div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Vendemos o carro por você</h5>
+                        <p class="card-text">Consignado, não se preocupe!<br>Nós iremos vendê-lo para você.</p>
+                      </div>
+                    </div><!-- fim card-->
+            </div>
+          </div>
+        </div>
+    </div> <!-- fim conteiner opçoes -->
+
+    <div class="rede-social"> <!-- rede social -->
+        <div class="text-center">
+            <div><h5>Nosso Instagram</h5></div>
+            <div>
+                <a href="http://www.instagram.com/maxveiculosoficial" target="_blank"><img src="img/insta.png" width="30px"></a>
+            </div>
+        </div>
+    </div> <!-- fim rede social -->
+        
+    <footer>
+        <div class="footer " style="font-size: 0.8rem;">
+            <div >
+                <div class="footer-resp" style="text-align: center">
+                    <strong>&copy;2022 GW SOFTWARE. Todos os direitos reservados.</strong>
+                </div>
+                     <div class="footer-resp2" style="text-align: center">
+                        <div class="offcanvas offcanvas-bottom" id="demo" style="height: 90px;">
+                          <div class="offcanvas-header">
+                            <div class="offcanvas-title" style="margin: 0 auto;"><img src="img/acerto.png" width="200"></div>
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                          </div>
+                          
+                        </div>
+
+                        <div class="container-fluid mt-1">
+                          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="border: none">
+                            <img src="img/gwpreto.png" width="60">
+                          </button>
+                        </div>
+
+                        <!--<span class="me-3"><a style="text-decoration: none;" href="###"><img src="img/gwpreto.png" width="40"></a></span>-->
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    
+    
+
+    </body>
+</html>

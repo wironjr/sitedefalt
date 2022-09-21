@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+    
+    <title>Estoque - Loja 1</title>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top "><!--menu top-->
+              <div class="container-fluid ">
+              <a class="navbar-brand" href="index.html"><img src="img/grupomax.png" width="150"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ">
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle semborda text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ESTOQUE
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item ativo-drop" href="loja1.html">Loja 1</a></li>
+                        <li><a class="dropdown-item" href="conceito.html">Conceito</a></li>
+                        <li><a class="dropdown-item" href="repasse.html">Repasse</a></li>
+                         <li><a class="dropdown-item" href="aldeota.html">Aldeota</a></li>
+                          <li><a class="dropdown-item" href="motos.html">Motos</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="venda.html">venda seu carro</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="financiamento.html">financie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">(85) 3021.2211</a>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="nav-link semborda whats-hover" target="_blank" href="https://wa.me/558530326220">
+                            <div><img src="img/whatsapp.png" width="26px"><span class=" ms-2" style="font-size: 0.7rem">Tem duvidas? Clique aqui!</span></div>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav> <!--fim menu top-->
+
+
+
+        
+    
+        <div class="card me-3 ms-3 mb-3 shadow" style="margin-top: 80px;"> <!--inicio card-->
+          <div class="card-body "> 
+                <div class="m-2">
+                    <div class="text-qual-veiculo">
+                        <h4><strong>Qual veículo você procura?</strong></h4>
+                    </div>
+                    <div class="barra-search">
+                        <div class="input-group input-group-sm mb-3 md" id="busca-modelo-resp" style="width: 300px;">
+                          <input type="search" class="form-control " placeholder="Marca ou modelo" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <span class="input-group-text" onclick="alerta()" id="basic-addon2"><button style="border: none;"><img src="img/lupa.png" width="26"></button></span>
+                        </div>
+                    </div>
+
+                <div class="bnt-responsive d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: -50px;">
+                    <button type="button" class="btn btn-primary btn-warning" id="liveToastBtn">Todo o estoque</button>
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <img src="img/gwlogo.png" width="50px" class="rounded me-2" alt="...">
+                              <strong class="me-auto">Calma amigo!</strong>
+                              <small>Desculpe!</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                              Ainda vamos implementar esse botão.
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                </div>
+
+                <div class=" loja1-card-marca container text-center mt-4 mb-3" >
+                  <div class="row">
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                    <div class="col">
+                        <div class="card card-marca"><!-- card marca -->
+                              <div class="card-body text-center">
+                                <a href="">
+                                    <div><img src="img/volks.png" width="70"></div>
+                                    <div style="font-size: 0.8em">VOLKSVAGEM</div>
+                                </a>
+                            </div>
+                        </div> <!-- fim card marca -->
+                    </div>
+                </div><!--fim grid coluna-->
+            </div> 
+        </div>
+        </div><!--fim card principal-->
+
+    
+
+    <div class="mt-5 mb-5 ">
+    <div class="container text-center ">
+      <div class="row">
+        <div class="text-rigth mb-3">
+            <h4 class="title-disponivel" style="text-transform: uppercase; text-align: left; border-bottom: 1px solid #dedede;">Veículos disponíveis Loja 1</h4>
+        </div>
+        <div>Foram encontrados <strong>29</strong> veículos</div>
+        <div class="mb-4" style="font-size: 0.7rem"> <strong>9</strong> exibidos</div>
+        <div class="col d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 1-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/fox.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/volks.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Volksvagem</strong> FOX ITREND 2015</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Fox 1.0 Flex
+                        <div>
+                            <span class="painel">110.000km</span>
+                            <span class="marcha">Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo--> 
+
+
+        </div>
+
+        <div class="col order-1 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 2-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/s10.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/chevrolet.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Chevrolet</strong> S10 Country LTZ 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        S10 3.0 Turbo Diesel
+                        <div>
+                            <span class="painel">82.000km</span>
+                            <span class="marcha">Automática</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>185.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+
+        <div class="col order-5 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 3-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/bros.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/honda.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Honda</strong> BROS 160 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Bros 160cc Flex
+                        <div>
+                            <span class="painel">39.000km</span>
+                            <span class="marcha">Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+      </div>
+    </div>
+    </div><!--fim conteiner card novidades-->
+
+
+    <div class="mt-5 mb-5 ">
+    <div class="container text-center ">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 1-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/fox.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/volks.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Volksvagem</strong> FOX ITREND 2015</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Fox 1.0 Flex
+                        <div>
+                            <span class="painel">110.000km</span>
+                            <span class="marcha">Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo--> 
+
+            
+        </div>
+
+        <div class="col order-1 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 2-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/s10.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/chevrolet.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Chevrolet</strong> S10 Country LTZ 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        S10 3.0 Turbo Diesel
+                        <div>
+                            <span class="painel">82.000km</span>
+                            <span class="marcha">Automática</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>185.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+
+        <div class="col order-5 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 3-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/Onix.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/chevrolet.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Honda</strong> ONIX LTZ 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Onix LTZ 1.4
+                        <div>
+                            <span class="painel">12.000km</span>
+                            <span class="marcha">Automático</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>78.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+      </div>
+    </div>
+    </div><!--fim conteiner card novidades-->
+
+    <div class="mt-5 mb-5 ">
+    <div class="container text-center ">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 1-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/fox.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/volks.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Volksvagem</strong> FOX ITREND 2015</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Fox 1.0 Flex
+                        <div>
+                            <span class="painel">110.000km</span>
+                            <span class="marcha">Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo--> 
+
+
+        </div>
+
+        <div class="col order-1 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 2-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/s10.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/chevrolet.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Chevrolet</strong> S10 Country LTZ 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        S10 3.0 Turbo Diesel
+                        <div>
+                            <span class="painel">82.000km</span>
+                            <span class="marcha">Automática</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>185.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+
+        <div class="col order-5 d-flex justify-content-center">
+          <div class="card shadow" style="width: 24rem;"> <!-- inicio card veículo 3-->  
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><img src="img/carros/bros.jpeg"></li>
+                <li class="list-group-item text-start">
+                    <div class="img-marca">
+                        <img src="img/honda.png" style="width: 25px;">
+                    </div>
+                    <div class="marca-detalhes">  <!-- ficha tecnica veículo-->  
+                        <h5><strong>Honda</strong> BROS 160 2019</h5>
+                    </div>
+                    <div style="clear: both;">
+                        Bros 160cc Flex
+                        <div>
+                            <span class="painel">39.000km</span>
+                            <span class="marcha">Manual</span>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="list-group-item text-start"><span class="fs-6">R$</span><span class="fs-4"><strong>18.0000,00</strong></span>
+                    <button type="button" onclick="alerta()" class="btn btn-sm btn-outline-warning position-absolute top-50 end-0 translate-middle-y me-2" style="font-size: 0.6rem;"><strong>Ver mais...</strong></button>
+                </li>
+              </ul>
+            </div><!-- fim card veículo--> <!-- fim ficha tecnica veículo-->  
+        </div>
+      </div>
+    </div>
+    </div><!--fim conteiner card novidades-->
+
+    <nav class="mb-5" aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Próxima</a>
+        </li>
+      </ul>
+    </nav>
+    
+
+    
+    <div class="rede-social"> <!-- rede social -->
+        <div class="text-center">
+            <div><h5>Nosso Instagram</h5></div>
+            <div>
+                <a href="http://www.instagram.com/maxveiculosoficial" target="_blank"><img src="img/insta.png" width="30px"></a>
+            </div>
+        </div>
+    </div> <!-- fim rede social -->
+
+
+    <div class="mt-5 text-white bg-dark endereco"><!--endereços-->
+            <div class="d-flex flex-row mb-3 justify-content-center flex-wrap">
+              <div class="p-2">
+                <iframe class="mapa-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15925.462246892788!2d-38.59329346044922!3d-3.730242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a2cf2636d1d%3A0xae1cb0a85d775641!2sMax%20Ve%C3%ADculos!5e0!3m2!1spt-BR!2sbr!4v1662241123893!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="p-2" style="margin-top: 40px">
+                <h5>Max Veículos Loja 1</h5>
+                    <span><i class="bi bi-geo-alt-fill me-1"></i>Av. Sargento Hermínio, 3951 - Presidente Kennedy</span>
+                    <h5 class="mt-4">Horário de funcionamento</h5>
+                    <span><strong>SEG-SEX</strong></span><span> 8h às 18h</span><br>
+                    <span><strong>SÁBADO</strong></span><span> 8h às 14h</span>
+                    <p class="mt-5 fs-5"><strong><i class="bi bi-telephone me-1"></i>85 3021.30920</strong></p><br>
+              </div>
+            </div>
+    </div><!-- fim endereços-->
+
+    <footer>
+        <div class="footer" style="font-size: 0.8rem;">
+            <div>
+                <div class="footer-resp" style="text-align: center">
+                    <strong>&copy;2022 GW SOFTWARE. Todos os direitos reservados.</strong>
+                </div>
+                     <div class="footer-resp2" style="text-align: center">
+                        <div class="offcanvas offcanvas-bottom" id="demo" style="height: 90px;">
+                          <div class="offcanvas-header">
+                            <div class="offcanvas-title" style="margin: 0 auto;"><img src="img/acerto.png" width="200"></div>
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                          </div>
+                          
+                        </div>
+
+                        <div class="container-fluid mt-1">
+                          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo" style="border: none">
+                            <img src="img/gwpreto.png" width="60">
+                          </button>
+                        </div>
+
+                        <!--<span class="me-3"><a style="text-decoration: none;" href="###"><img src="img/gwpreto.png" width="40"></a></span>-->
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+          toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+          })
+        }
+    </script>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+    <script>
+        function alerta() {
+            alert("\nGW SOFTWARE\nAinda vamos implementar esse botão!")
+        }
+
+    </script>
+    </body>
+</html>
