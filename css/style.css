@@ -134,7 +134,7 @@ a{
 
 /*navbar*/
 .navbar ul li a{
-	color: white;
+	color: black;
 	text-transform: uppercase;
 }
 
@@ -150,21 +150,21 @@ a{
 }
 
 .navbar ul li a:hover{
-	color: black;
+	color: red;
 	;
 	
 }
 
 .navbar ul li .semborda:hover{
-	border: none;
+	border: red;
 }
 
 .whats-hover  span{
-	color: red
+	color: white;
 }
 
 .whats-hover span:hover{
-	color: white;
+	color: red;
 	transition: color 0.5s;
 }
 
